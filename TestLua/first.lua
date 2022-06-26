@@ -4,6 +4,8 @@
 -- Чётные числа делим на 2
 -- Числа меньшие n вывести на экран
 
+-- Вау, Lua
+
 -- Переменные
 local a = {}
 local d = 5
@@ -24,7 +26,6 @@ for i = 1, d do
     else
         a[i] = a[i] * 2
     end
-    math.abs(a[i])
     print(a[i])
 end
 
