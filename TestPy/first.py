@@ -6,8 +6,10 @@
 
 # Вау, Python
 
+# Модули
 import random, math
 
+# Переменные
 a = {}
 d = 5
 n = 5
@@ -33,7 +35,6 @@ while i < d:
 i = 0
 
 # Числа меньше n
-
 print("меньше n:")
 while i < d:
     if a[i] < n:
