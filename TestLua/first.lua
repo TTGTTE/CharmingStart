@@ -28,3 +28,5 @@ for i = 1, d do
     end
     print(a[i])
 end
+
+-- Сортировка
