@@ -9,3 +9,4 @@ And even here
 ]]
 
 print("Woah Woah Woah"); --[[Typical printf like in C what?!]]
+print("Don't mind my comment here!");
