@@ -52,7 +52,7 @@ int main(void)
         }
 
     printf("\nНаша таблица:");
-    printf("\n Номер | Факультет | Места | Проектор ");
+    printf("\n  Номер|  Факультет|  Места|  Проектор|\n");
     for (i = 0; i < n; i++)
         printf("\n%4d %6s %11d %13s", cabpip[i].num, cabpip[i].fac, cabpip[i].seats, cabpip[i].screen);
         printf("\n");
@@ -61,7 +61,7 @@ int main(void)
     printf("\nВведите количество мест: ");
         scanf("%d",&co);
         printf("\nДанные, удовлетворяющие поиску: ");
-        printf("\n Номер | Факультет | Места | Проектор ");
+        printf("\n  Номер|  Факультет|  Места|  Проектор|\n");
         for (i = 0; i < n; i++)
             if (cabpip[i].seats >= co)
             printf("\n%4d %6s %11d %13s",cabpip[i].num, cabpip[i].fac, cabpip[i].seats, cabpip[i].screen);
@@ -77,6 +77,8 @@ int main(void)
         char *screen1; screen1 = (char *) malloc(20 * sizeof(char));
         int seats1; 
 
+        int k = 0;
+
         for (i=0; feof(F1) == 0; i++)
         {  
         fscanf(F1,"%d\n%s\n%d\n%s\n", &num1, fac1, &seats1, screen1);
@@ -86,17 +88,16 @@ int main(void)
         (st+i)->seats  = seats1;
         (st+i)->screen = (char*) malloc(20 * sizeof(char));
         strcpy((st+i)->screen, screen1);
+        k++;
         }
 
         fclose(F1);
 
-        for(i = 0; i < 3; ++i, ++st)
+        printf("\n  Номер|  Факультет|  Места|  Проектор|\n");
+        for(i = 0; i < k; ++i, ++st)
         {   
-            printf("|%5d|%10s|%5d|%5s|\n", st->num, st->fac, st->seats, st->screen);
+            printf("%7d|%11s|%7d|%10s|\n", st->num, st->fac, st->seats, st->screen);
         }
-
-        
-
             break;
         }
     }

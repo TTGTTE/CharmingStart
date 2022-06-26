@@ -2,3 +2,5 @@
 *.json
 .vscode/tasks.json
 TrainingCpp/vadim.exe
+*.exe
+*.txt
