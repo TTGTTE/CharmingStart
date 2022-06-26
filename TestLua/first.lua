@@ -10,18 +10,18 @@
 local a = {}
 
 -- Ввод размера массива
-print("Enter array size:")
+print "Enter array size:"
 local d = io.read()
 
 -- Изначальный массив
-print("Our array:")
+print "Our array:"
 for i = 1, d do
     a[i] = math.random(1,10)
     print(a[i])
 end
 
 -- Изменённый массив
-print("Changed array:")
+print "Changed array:"
 for i = 1, d do
     if math.fmod(a[i], 2) == 0 then
         a[i] = a[i] / 2
@@ -33,12 +33,12 @@ for i = 1, d do
 end
 
 -- Ввод числа n
-print("Enter n:")
+print "Enter n:"
 local n = io.read()
 n = tonumber(n)
 
 -- Числа меньше n
-print("Less than n:")
+print "Less than n:"
 for i = 1, d do
     if a[i] < n then
     print(a[i])

@@ -9,6 +9,6 @@ public class test {
         System.out.println("Здесь тоже работает нормально кодировка!");
         System.out.println("Хотя бы так...");
         System.out.println("А то я устал от lua.");
-        System.out.println("Но, говорят, он быстрее, но вот бы выучить Java.");
+        System.out.println("Вот бы выучить Java, я даже норм программу сделать не могу.");
     }
 }
