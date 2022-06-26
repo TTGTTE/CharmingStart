@@ -6,22 +6,24 @@
 
 -- Вау, Lua
 
+os.setlocale("rus_rus.1251")
+
 -- Переменные
 local a = {}
 
 -- Ввод размера массива
-print "Enter array size:"
+print "Введите размер массива:"
 local d = io.read()
 
 -- Изначальный массив
-print "Our array:"
+print "Начальный массив:"
 for i = 1, d do
     a[i] = math.random(1,10)
     print(a[i])
 end
 
 -- Изменённый массив
-print "Changed array:"
+print "Изменённый массив:"
 for i = 1, d do
     if math.fmod(a[i], 2) == 0 then
         a[i] = a[i] / 2
@@ -33,12 +35,12 @@ for i = 1, d do
 end
 
 -- Ввод числа n
-print "Enter n:"
+print "Введите число n:"
 local n = io.read()
 n = tonumber(n)
 
 -- Числа меньше n
-print "Less than n:"
+print "Числа меньше n:"
 for i = 1, d do
     if a[i] < n then
     print(a[i])
