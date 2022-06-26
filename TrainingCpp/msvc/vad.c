@@ -12,6 +12,14 @@ struct cab
     char *screen;
 };
 
+struct cab2
+{
+    int num;
+    char fac[40];
+    int seats;
+    char screen[10];
+};
+
 int main(void)
 {
     SetConsoleCP(1251);
@@ -20,13 +28,11 @@ int main(void)
     int n = 10;
     char str[200][20];
     FILE *F1;
-    struct cab cabpip[n];
-    struct cab *st, *out;
-    st  = (struct cab *) malloc(10 * sizeof(struct cab));
+    struct cab2 cabpip[n];
 
     do
     {
-        printf("Введите:\n");
+        printf("\nВведите:\n");
         printf("1 - для создания структуры:\n");
         printf("2 - для использования файла:\n");
         printf("0 - для выхода:\n");
@@ -52,23 +58,27 @@ int main(void)
         }
 
     printf("\nНаша таблица:");
-    printf("\n  Номер|  Факультет|  Места|  Проектор|\n");
+    printf("\n  Номер|  Факультет|  Места|  Проектор|");
     for (i = 0; i < n; i++)
-        printf("\n%4d %6s %11d %13s", cabpip[i].num, cabpip[i].fac, cabpip[i].seats, cabpip[i].screen);
+        printf("\n%7d|%11s|%7d|%10s|", cabpip[i].num, cabpip[i].fac, cabpip[i].seats, cabpip[i].screen);
         printf("\n");
 
 
     printf("\nВведите количество мест: ");
         scanf("%d",&co);
         printf("\nДанные, удовлетворяющие поиску: ");
-        printf("\n  Номер|  Факультет|  Места|  Проектор|\n");
+        printf("\n  Номер|  Факультет|  Места|  Проектор|");
         for (i = 0; i < n; i++)
             if (cabpip[i].seats >= co)
-            printf("\n%4d %6s %11d %13s",cabpip[i].num, cabpip[i].fac, cabpip[i].seats, cabpip[i].screen);
+            printf("\n%7d|%11s|%7d|%10s|",cabpip[i].num, cabpip[i].fac, cabpip[i].seats, cabpip[i].screen);
 
             break;
     
         case 2:
+
+        
+        struct cab *st, *out;
+        st  = (struct cab *) malloc(10 * sizeof(struct cab));
 
         F1 = fopen("cabinets.txt", "r");
 
