@@ -32,10 +32,10 @@ for i = 1, d do
     print(a[i])
 end
 
--- Сортировка
-print("Less than 5:")
+-- Числа меньше n
+print("Less than n:")
 for i = 1, d do
-    if a[i] < 5 then
+    if a[i] < n then
     print(a[i])
     end
 end
