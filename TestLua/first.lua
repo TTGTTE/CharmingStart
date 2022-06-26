@@ -13,7 +13,6 @@ local n = 5
 
 -- Изначальный массив
 print("Our array:")
-
 for i = 1, d do
     a[i] = math.random(1,10)
     print(a[i])
@@ -21,7 +20,6 @@ end
 
 -- Изменённый массив
 print("Changed array:")
-
 for i = 1, d do
     if math.fmod(a[i], 2) == 0 then
         a[i] = a[i] / 2
