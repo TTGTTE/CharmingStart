@@ -1,6 +1,8 @@
 #include <iostream>
 #include <windows.h>
 
+// Тренировка в C++
+
 using namespace std;
 
 int main()
