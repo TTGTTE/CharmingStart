@@ -12,4 +12,6 @@ int main()
     cout << "Введите a: ";
     cin >> a;
     cout << a;
+
+    return 0;
 }
