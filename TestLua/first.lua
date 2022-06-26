@@ -8,8 +8,10 @@
 
 -- Переменные
 local a = {}
-local d = 5
-local n = 5
+
+-- Ввод размера массива
+print("Enter array size:")
+local d = io.read()
 
 -- Изначальный массив
 print("Our array:")
@@ -26,8 +28,14 @@ for i = 1, d do
     else
         a[i] = a[i] * 2
     end
+    a[i] = math.floor(a[i])
     print(a[i])
 end
+
+-- Ввод числа n
+print("Enter n:")
+local n = io.read()
+n = tonumber(n)
 
 -- Числа меньше n
 print("Less than n:")
