@@ -108,6 +108,16 @@ int main(void)
         {   
             printf("%7d|%11s|%7d|%10s|\n", st->num, st->fac, st->seats, st->screen);
         }
+
+        printf("\nВведите минимальное количество мест в кабинете: ");
+        scanf("%d",&co);
+        printf("\nДанные, удовлетворяющие поиску: ");
+        printf("\n Номер | Факультет | Места | Проектор |\n");
+        for (i = 0; i < k; ++i, ++st)
+            {
+            if (seats1 >= co)
+            printf("%7d|%11s|%7d|%10s|\n", num1,fac1,seats1,screen1);
+            }
             break;
         }
     }
