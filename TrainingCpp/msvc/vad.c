@@ -85,7 +85,7 @@ int main(void)
         char *fac1; fac1 = (char *) malloc(20 * sizeof(char));
         int num1;
         char *screen1; screen1 = (char *) malloc(20 * sizeof(char));
-        int seats1; 
+        int seats1;
 
         int k = 0;
 
@@ -101,6 +101,8 @@ int main(void)
         k++;
         }
 
+        struct cab2 cabdip[n];
+
         fclose(F1);
 
         printf("\n  Номер|  Факультет|  Места|  Проектор|\n");
@@ -109,16 +111,27 @@ int main(void)
             printf("%7d|%11s|%7d|%10s|\n", st->num, st->fac, st->seats, st->screen);
         }
 
-        printf("\nВведите минимальное количество мест в кабинете: ");
+        for(i = 0; i < k; ++i, ++st)
+        {
+            (st+i)->num  = cabdip[i].num;
+            (st+i)->fac = (char*) malloc(20 * sizeof(char));
+            strcpy((st+i)->fac, cabdip[i].fac);
+            (st+i)->seats  = cabdip[i].seats;
+            (st+i)->screen = (char*) malloc(20 * sizeof(char));
+            strcpy((st+i)->screen, cabdip[i].screen);
+        }
+
+        printf("\nВведите количество мест: ");
         scanf("%d",&co);
         printf("\nДанные, удовлетворяющие поиску: ");
-        printf("\n Номер | Факультет | Места | Проектор |\n");
-        for (i = 0; i < k; ++i, ++st)
-            {
-            if (seats1 >= co)
-            printf("%7d|%11s|%7d|%10s|\n", num1,fac1,seats1,screen1);
-            }
-            break;
+        printf("\n  Номер|  Факультет|  Места|  Проектор|");
+        for (i = 0; i < k; i++)
+            if (cabpip[i].seats >= co)
+            printf("\n%7d|%11s|%7d|%10s|",cabdip[i].num, cabdip[i].fac, cabdip[i].seats, cabdip[i].screen);
+
+
+
+        break;
         }
     }
     while (a != 0);
