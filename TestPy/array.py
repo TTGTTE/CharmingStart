@@ -18,6 +18,7 @@ a = [random.randint(1, 10) for i in range(d)]
 b = []
 c = []
 
+# Начальный список
 print("Изначальный массив:")
 print(*a)
 for i in range(len(a)):
@@ -29,6 +30,7 @@ for i in range(len(a)):
         b.append(a[i])
     b[i] = round(b[i])
 
+# Конечный список
 print("Изменённый массив:")
 print(*b)
 n = int(input("Введите число n: "))
@@ -36,5 +38,6 @@ for i in range(len(b)):
     if b[i] < n:
         c.append(b[i])
 
+# Числа до n
 print("Числа меньше n:")
 print(*c)
