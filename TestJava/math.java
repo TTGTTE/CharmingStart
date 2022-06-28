@@ -6,8 +6,8 @@ public class math
 {
     public static void main(String args[])
     {
-        JFrame frame = new JFrame("РњР°С‚РµРјР°С‚РёРєР°");
-        JLabel label = new JLabel("Р’РѕСѓ!", JLabel.CENTER);
+        JFrame frame = new JFrame("Math");
+        JLabel label = new JLabel("Woah!", JLabel.CENTER);
         frame.add(label);
         frame.setSize(300, 300);
         frame.setVisible(true);
